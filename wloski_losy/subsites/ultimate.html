@@ -1,0 +1,40 @@
+<!--
+Author: Stanisław Marchwiński
+Date: 19.08.2024
+Description: Strona projektu "Język Włoski - Pytania"
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pytania - Wszystkie teksty</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    <link rel="stylesheet" href="../style_test.css">
+</head>
+<body>
+    <!-- Powrót do lobby -->
+    <a class="lobby" href="../lobby.html">
+        <img src="../img/lobby_icon.png" width="60%" height="60%">
+    </a>
+
+    <!-- Część główna -->
+    <main>
+        <h1><br>Wszystkie teksty</h1>
+        <p id="pytanie"></p>
+        <div class="buttons-container">
+            <button class="los">Losuj pytanie</button>
+            <button class="podp">Podpowiedź</button>
+            <button class="odp">Pokaż odpowiedź</button>
+        </div>
+        <p id="podpowiedz"></p>
+        <p id="odpowiedz"></p>
+    </main>
+    
+    <!-- Skrypty -->
+    <script src="../scripts/ultimate/losuj.js"></script>
+    <script src="../scripts/ultimate/podpowiedz.js"></script>
+    <script src="../scripts/ultimate/odpowiedz.js"></script>
+</body>
+</html>

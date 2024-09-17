@@ -1,0 +1,152 @@
+/*
+Author: Stanisław Marchwiński
+Date: 27.08.2024
+Description: Style projektu "Język Włoski - Pytania"
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/bgb.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin: 0;
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    width: 80%;
+    max-width: 800px;
+    min-height: 60%; /* Używamy wysokości minimalnej */
+    max-height: 550px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+/* Pozostała część stylizacji bez zmian */
+
+#pytanie, #podpowiedz, #odpowiedz {
+    overflow-wrap: break-word;
+    width: 90%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+#pytanie {
+    position: absolute;
+    bottom: calc(50% + 15px);
+    text-align: center;
+    display: none;
+    background-color: #ffc400;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+#podpowiedz, #odpowiedz {
+    position: absolute;
+    top: calc(50% + 15px);
+    text-align: center;
+    display: none;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+#podpowiedz {
+    background-color: #e79211;
+}
+
+#odpowiedz {
+    background-color: #32bb09;
+}
+
+/* Przyciski */
+
+.los,.podp,.odp {
+    background-color: #007bff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    border-width: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: ease-in-out 0.25s;
+    margin: 5px;
+    cursor: pointer;
+    display: flex; /* Ustawienie flexboxa dla przycisków */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Dostosowanie paddingu przycisków */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.los:hover {
+    background-color: #0056b3;
+}
+
+.podp,.odp {
+    display: none;
+}
+
+.podp:hover,.odp:hover {
+    background-color: #0056b3;
+    position: relative;
+}
+
+.los:active,.podp:active,.odp:active {
+    background-color: #004085;
+}
+
+.lobby {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsywność */
+
+@media screen and (max-width: 768px) {
+    main {
+        height: 80%; /* Dostosowanie wysokości na małych ekranach */
+    }
+}
